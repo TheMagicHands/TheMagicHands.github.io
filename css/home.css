@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500&family=Pacifico&display=swap');
+
+html{
+    font-family: "Montserrat";
+}
+body {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("../assets/homeBackground.png");
+    background-size: auto;
+    background-repeat: repeat;
+    background-color: rgba(255, 255, 255, 0.4);
+   
+    
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+section {
+    padding: 2em;
+    margin: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color:rgb(31, 192, 192);
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project {
+    width: 30%;
+    margin: 1em;
+}
+
+#projectPic {
+    overflow: hidden;
+}
+
+#about{
+    text-align: center;
+}
+
+#contact {
+    margin: auto;
+    max-height: 5vh;
+    min-height: 3vh;
+    display: flex;
+    flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+}
+
+
+footer {
+    text-align: center;
+    padding: .25em;
+    background-color: #333;
+    color: white;
+}
