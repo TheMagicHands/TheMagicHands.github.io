@@ -3,54 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MountainMan</title>
-    <link rel="stylesheet" href="../css/home.css">
+    <title>reSummit</title>
+    
+    <link rel="stylesheet" href="./test.css">
 </head>
-<body>
-
-    <header>
-        <h1>Jason Fagan</h1> <h2>Web Developer</h2>
+<body id="body">
+    
+    <nav>
         
-    </header>
-
-    <section id="about">
-        <h3>Hey There!</h3>
-        <p>
-             I design to reduce the amount of times we say <em>this shouldn't be this difficult </em>and <em>it was a good idea but poorly executed</em>. Moreover,
-            as a designer I seek to <strong>challenge the current state of design</strong> and prove that supposed unfeasible concepts can be done, and done well. While many 
-            of my projects reside in the digital realm, I am constanly curious about apllying these concepts to the world around us.
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <a href="./project1.html"><img id="projectPic" src="../assets/placeholder.jpg" alt="RFID Reader" width="150" height="150">
-                <h3>Smithsonian RFID</h3></a>
-                <p>Built a an app, server, and client program to create an RFID system that enhances museum accesibility
-                    by delivering supplemental content such as aduio descriptions automatically triggered by proximity to the exhibit
-                </p>
-            </div>
-            <div class="project">
-                <img id="projectPic" src="../assets/placeholder.jpg" alt="Food Fight Exhibit Image" width="150" height="150">
-                <h3>Food Fight</h3>
-                <p>Built consoles powered by Raspbery Pi 4 computers to create interactive sattions throught the Food Fight! exhibit at MSU Museum.
-                     These consoles also record analytics related to user action for museum staff</p>
-            </div>
-            <!-- Add more project divs as needed -->
+            <a href="#" class="navLink" id="homeLink">Home</a>
+            <a href="#" class="navLink" id="aboutLink">About</a>
+            <a href="#" class="navLink"  id="projectsLink">Resume</a>
+            <!--<a href="#" class="navLink" id="resumeLink">Resume</a>-->
+            <a href="#contact" class="navLink" id="contactLink">Contact</a>
+        
+    </nav>
+    <div id="homePara">
+        <section id="homeIntro">
+            <h2 id="nameIntro">Hello! My name is <strong>Jason</strong></h2>
+            <p id="descIntro">I am an Experience and Information Architect with passions for <strong>Efficiency</strong>,  <strong>Breaking Molds</strong>,  and the <strong>Environment</strong>.</p>
+        </section>
+        <section id="featuredProject">
+            <div>
+                <h2>SOS RFID</h2>
+            <p>Built an app, server, and client program to create an RFID system that enhances museum accesibility by delivering supplemental content such as audio descriptions automatically triggered by proximity to the exhibit </p>
         </div>
-    </section>
+        <img src="./assets/Team at Smithsonian Event 4.19.23.JPG" alt="SOS RFID Team">
+        </section>
+        <section id="featuredProject2">
+            <div>
+                <h2>Project Title</h2>
+                <p>this is the description for the projects. An engaging intro to interest portfolio viewers</p>
+            </div>
+            <img src="" alt="">
+        </section>
+    </div>
+    <div id="mountains">
+        
+    </div>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: jasonfaganjr@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/jason-fagan-252bb31b8/" target="_blank">Your LinkedIn Profile</a></p>
-        <p>GitHub: <a href="https://github.com/your-github-profile" target="_blank">Your GitHub Profile</a></p>
-    </section>
-
+    <div id="contact">
+        <img src="./assets/portfolioContactMen.svg" alt="">
+        <h3>Lets start our journey together; use the links below to get in touch.</h3>
+        
+    </div>
+    <div id="links">
+        <p><a href="mailto:jasonfaganjr@gmail.com"><img src="./assets/emailIcon.png" alt="Email Me at jasonfaganjr@gmail.com" width="60vw"></a></p>
+        <p> <a href="https://www.linkedin.com/in/jason-fagan-252bb31b8/" target="_blank"><img src="./assets/LI-In-Bug.png" alt="" width="60vw"></a></p>
+        <p><a href="https://github.com/TheMagicHands/" target="_blank"><img src="./assets/github-mark-white.png" alt="" width="60vw"></a></p>
+    </div>
+    <!--
     <footer>
-        <p>&copy; 2023 Jason Fagan. All rights reserved.</p>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
     </footer>
-
+    -->
+   <script src="./test.js"></script>
 </body>
 </html>
