@@ -1,0 +1,241 @@
+ /* Add your CSS styles here */
+ @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500&family=Pacifico&display=swap');
+ body {
+     
+     margin: 0;
+     padding: 0;
+ }
+
+ header {
+     background-color: #333;
+     color: #fff;
+     padding: 10px;
+     text-align: center;
+ }
+
+ nav {
+     background-color: none;
+     padding: 10px;
+     margin-top: 20px;
+     text-align: center;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     height: 8rem;
+     position: sticky;
+     top:0rem;
+     z-index: 10;
+ }
+
+ nav ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     text-align: center;
+     display: flex;
+     flex-direction: row;
+ }
+
+ nav ul li {
+     
+     margin-right: 10px;
+ }
+
+ nav a {
+     text-decoration: none;
+     color: #333;
+     padding: 5px 10px;
+     height: 4rem;
+     width: 10rem;
+     
+ }
+
+ nav a:hover {
+     
+     color: #54A9E4;
+ }
+
+ .navLink{
+     
+     background-size: contain;
+     background-repeat: no-repeat;
+     position: relative;
+     background-position: center;
+     overflow: visible;
+     text-align: center;
+     line-height: 4rem;
+     color: #fff;
+ }
+
+ #homeLink{
+     background-image: url(./assets/homeCloudDark.svg);
+     align-self: flex-end;
+ }
+
+ #aboutLink{
+     background-image: url(./assets/aboutCloudDark.svg);
+     align-self: flex-start;
+ }
+
+ #projectsLink{
+     background-image: url(./assets/projectsCloudDark.svg);
+     align-self: center;
+     height: 5rem;
+     line-height: 5rem;
+ }
+
+ #resumeLink{
+     background-image: url(./assets/homeCloudDark.svg);
+     align-self: flex-start;
+ }
+
+ #contactLink{
+     background-image: url(./assets/aboutCloudDark.svg);
+     align-self: flex-end;
+ }
+
+ section {
+     padding: 20px;
+ }
+
+
+ html{
+     background-image: url(./assets/portfolioBackground.svg);
+     background-size: cover;
+     background-attachment:fixed;
+     font-family: "Bellota Text", Arial, Helvetica, sans-serif;
+     scroll-behavior: smooth;
+     scrollbar-width: none; /* Firefox */
+     -ms-overflow-style: none;
+ }
+
+ #homeIntro{
+    scroll-snap-align: start;
+     margin: auto;
+     width: 60%;
+     color: #5B9ED9;
+     text-align: center;
+     font-family: "Bellota Text", Arial, Helvetica, sans-serif;
+
+     #nameIntro{
+         font-size: 3.5rem;
+         font-weight: 300;
+     }
+
+     #descIntro{
+         font-size: 2rem;
+     }
+ }
+
+ #homePara{
+     overflow-y: scroll;
+     max-height: 20rem;
+ }
+
+ #featuredProject{
+    scroll-snap-align: start;
+     color: #fff;
+     margin-left: 15%;
+     margin-right: 15%;
+     margin-top: .5rem;
+     border-radius: 30px;
+     background-color: #022859;
+     display: flex;
+     flex-direction: row;
+     width: 40%;
+
+     img{
+        height: 15rem;
+        max-width: 50%;
+        border-radius: 10px;
+     }
+ }
+
+ #featuredProject2{
+    scroll-snap-align: start;
+    color: #fff;
+    margin-left: 45%;
+    margin-right: 15%;
+    margin-top: 3rem;
+    border-radius: 30px;
+    background-color: #022859;
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+
+    img{
+       height: 15rem;
+       max-width: 50%;
+       border-radius: 10px;
+    }
+}
+
+ 
+
+ #mountains{
+     position:relative;
+     top: 4rem;
+     
+     perspective: 2rem;
+     width: 100%;
+     height: 20rem;
+     background-image: url(./assets/portHomeMountains.svg);
+     background-size: cover;
+     z-index: 1;
+
+     
+     
+ }
+
+ #contact {
+     width: 100%;
+     background-color: #022859;
+     color: #fff;
+     overflow: visible;
+     position: relative;
+     top: 4rem;
+     img{
+         object-fit: contain;
+         height: 20rem;
+     }
+     z-index: 5;
+     display: flex;
+     flex-direction: row;
+     text-align: end;
+
+     h3{
+         margin-top: 5%;
+         font-weight: 900;
+     }
+ }
+
+ #links{
+     padding-left: 5rem;
+     z-index: 6;
+     position: relative;
+     text-align: center;
+     top: 0rem;
+     margin: .5rem;
+     max-height: 5vh;
+     min-height: 3vh;
+     display: flex;
+     flex-direction: row;
+         justify-content: flex-start;
+         align-items: center;
+     border-bottom: 0px;
+     border-radius: 10px;
+
+     a{
+         padding-left: 2rem;
+     }
+ }
+ footer {
+     background-color: #333;
+     color: #fff;
+     padding: 10px;
+     text-align: center;
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+ }
