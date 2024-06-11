@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.O.S. RFID</title>
+
+    <link rel="stylesheet" href="./project.css">
+</head>
+<body>
+
+    <nav>
+        
+        <a href="./index.html" class="navLink" id="homeLink">Home</a>
+        <a href="#" class="navLink" id="aboutLink">About</a>
+        <a href="./resume.html" class="navLink"  id="projectsLink">Resume</a>
+        <!--<a href="#" class="navLink" id="resumeLink">Resume</a>-->
+        <a href="#contact" class="navLink" id="contactLink">Contact</a>
+    
+</nav>
+<header>
+    <h1><em>Food Fight!</em></h1>
+    <p>Building an Interactive Exhibit Element with Raspbery PI and RFID</p>
+</header>
+<section id="project-details">
+    <h2>Overview</h2>
+    <p>
+        The MSU Museum requested an RFID Solution for their new exhibit: Food Fight! To enable patrons to navigate through a storyline at different interaction points while simultaneously exploring the exhibit space. </p>
+<div id="suppPics">
+<img src="../assets/MSUM_foodFightPoster.png" alt="Poster for upcoming Food Fight Exhibit" width="50%">
+<h4>Poster for upcoming Food Fight Exhibit</h4>
+</div>
+
+    <h2>Approach</h2>
+
+    <p>The first step in projects like these is to define a user journey to get an understanding of both hardware and software needs. The map below combines the user journey as well as a journey of information between the points of interaction and a server. This allows for a visualization of all the processes and rules that need to be analyzed and implemented on the software side and relating them to user actions.</p>
+    
+    <div id="suppPics">
+        <img src="../assets/foodFightUserJourney.png" alt="User Journey  Map for Food Fight Interactive Experience" width="100%">
+        <h4>User Journey  Map for Food Fight Interactive Experience</h4>
+    </div>
+
+ 
+    <h2>Hardware</h2>
+    <p>The project's relative simplicity is reflected in the hardware requirements. At its base the system requires 3 parts:
+        <ul>
+            <li>A Computer</li>
+            <li>A Screen</li>
+            <li>A RFID Reader</li>
+            <li>RFID Tags</li>
+        </ul>
+
+        These parts make up each console (formerly referred to as interaction points), while the server requires only a computer, and maybe a screen to check server health and fix any issues that may arise.
+    </p>
+
+    <h2>Software</h2>
+   
+    
+    
+    <div id="proPics">
+        <div id="halfText">
+            <p>
+                The software elements can be broken up into two parts: client and server. For the server, the only consideration is running the server itself. This is done utilizing Node.js and Socket.io, along with Express to serve HTML via the server to create an analytics dashboard to display usage metrics (in progress). The server's purpose is to manage usage of the consoles, ensuring that users interact with the storyline in a particular order. Additionally, the server tracks interactions for the analytical purposes mentioned earlier.
+                <br><br>
+                The console has to accomplish 3 things: interface with the RFID Reader, connect to the server, and display the necessary content. This is done with a python program using the mc522 library, the socket.io python client, and tKinter. This allows for an RFID read to trigger a server ping whose response dictates whether or not the content is displayed on the screen (content display is powered by tKinter). It is also worth noting that some work is required to configure the raspberry pi to auto start the program on boot up, rather than boot into the normal desktop. Using systemd, I was able to get the program to start automatically on the pi. This allows for the computers to be turned off and on with no worry on whether or not the system can be set up again.
+                </p>
+            <h2>Unexpected Challenges</h2>
+            <p>After completing a large portion of the project (server code and rc522 interfacing) I was told that the scope of the project had changed. Which at some level was nice because it was easier for me. But a lot of the work I had done wasn't being used and honestly some of the remaining implementation felt like we were doing it just to do it. This was tough but I understood the decisions and focused my efforts on making sure that everything else was working as it should under the new, simpler system.</p>
+             
+    <h2>Takeaways</h2>
+    <p>I really enjoy doing new projects like this because I get to take time to learn new skills. Automating a program on startup felt like a really daunting task, and while it did take some reading and multiple attempts, I feel much more confident in my ability to implement those kinds of scripts. Also, communicating with other people on the project is so important. Unlike my other project, I felt really out of the loop in the decision making that went along with this progress. I know now that it’s important to me to have a voice in my work rather than just being told what to do. I’m unsure whether or not that level of participation is realistic as an up and coming developer, but now I have a good professional goal to work towards.</p>
+
+        </div>
+        <div id="suppPics">
+            <img src="../assets/foodFightServerSnippet.png" alt="RFID Reader C# Code" width="100%">
+            <h4>Code for the Server</h4>
+            
+        </div>
+    </div>
+   
+    <h2>Features</h2>
+    <ul>
+        <li>Node.js server with Socket.io Integration</li>
+        <li>Python GUI created with TKinter library</li>
+        <li>Auto start of program using systemd</li>
+        <!-- Add more features as needed -->
+    </ul>
+</section>
+
+    <section id="back-to-portfolio">
+        <h4>&larr; <a href="./index.html">Back to Home</a></h4>
+    </section>
+
+</body>
+</html>
