@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.O.S. RFID</title>
+
+    <link rel="stylesheet" href="./project.css">
+</head>
+<body>
+
+    <nav>
+        
+        <a href="./index.html" class="navLink" id="homeLink">Home</a>
+        <a href="#" class="navLink" id="aboutLink">About</a>
+        <a href="./resume.html" class="navLink"  id="projectsLink">Resume</a>
+        <!--<a href="#" class="navLink" id="resumeLink">Resume</a>-->
+        <a href="#contact" class="navLink" id="contactLink">Contact</a>
+    
+</nav>
+<header>
+    <h1>S.O.S RFID</h1>
+    <p>Using RFID Technology to improve Musuem Accessibility</p>
+</header>
+    <section id="project-details">
+        <h2>Overview</h2>
+        <p>Museums are a great resource for the public; curating fascinating exhibits and providing opportunities for individuals to see and learn about things that would be difficult to find on one's own. Unfortunately, not everyone can experience all the great things museums have to offer. While accessibility initiatives have become more commonplace in spaces like museums, they are often behind and not up to a reasonable standard. For example: the portable mp3 player, a common solution to provide audio descriptions to museum patrons, removes autonomy of museum patrons by taking you on a fixed route; one that is oftentimes difficult to follow.The Science On a Sphere (SOS) Gallery at MSU Museum is a large sphere surrounded by projectors that can show a plethora of data sets from NOAA. While this resource is super cool, it is in no way accessible to individuals with visual and auditory impairments. </p>
+        
+<div id="suppPics">
+    <img src="../assets/SOS-Lab-1-scaled.jpg" alt="" width="50%">
+    <h4>The S.O.S. Gallery at the MSU Museum</h4>
+</div>
+
+        <h2>Problem</h2>
+
+        <p>
+            RFID Technology is up-and-coming in lots of museum spaces to promote interactivity such as the International Spy Museum in DC and the Hershey Story Museum. Many RFID Installations require specific user action in the form of a tap to activate the installation. How might we use this technology to power accessibility solutions that allow patrons to independently explore these spaces?
+        </p>
+
+        <!--
+        <h2>Background</h2>
+        <p>
+            This project began as a simple question: Can RFID Technology improve museum accessibility?
+            To prove that it could, we set out to use RFID to detect when people entered an exhibit in order to trigger a delivery of additional content; 
+            such as an audio description. This presented a challenge as RFID is a unilateral communication technology, presenting no method to send information back to the user.
+            This obstacle was bypassed through the use of websockets and a mobile app; providing a method of bilateral communication between the user and the RFID reader.
+
+        </p>
+    -->
+        <br>
+        <h2>Project Goals</h2>
+        <p>It was always set that RFID would somehow be integrated into the project and was likely that detection of the RFID tag would serve as a trigger for whatever it was that we came up with. The actions following the tag read evolved throughout the project, but many of the challenges and constraints remained the same.
+
+           <br><br> <strong>Initial:</strong> Create a system that uses the identification of an RFID tag as a trigger to initiate different actions on a computer based on the data the tag carries.
+           <br> <br><strong>Final:</strong> Use the RFID tag as an indicator of when users have entered a space, triggering delivery of accessible content to their personal device.
+        </p>
+        <br>
+        <h2>Jobs to be done</h2>
+        <p><strong>How can RFID communicate back with the user's device in order to initiate the desired actions (ex. companion audio) ?</strong>
+
+           <br><br> What does it take to build an accessible mobile app?
+            
+           <br><br> How to write a program for the RFID reader when all the documentation is proprietary?
+            
+           <br><br> Learning niche RFID Terms and understanding the functionality and  constraints of the hardware
+            </p>
+        <br>
+        <h2>Overcoming Obstacles</h2>
+        <div id="proPics">
+            <div id="halfText">
+                <p>Likely the largest obstacles to overcome throughout the course of the project was figuring out how an rfid trigger was going to lead to content being delivered back on a mobile device. A couple different avenues were explored. One of the original promising solutions was using bluetooth to register devices via MAC Address and push a packet over bluetooth to initiate an action. Finally, I discovered websockets which, unlike a traditional http server, utilizes bi-lateral communication to keep a channel open between server and client. Where in contrast, an http server is more of a call and response not allowing for the server to initiate communication with the client.
+                    <br><br>One of the most annoying things about working with RFID was how closed off all the information was. The two most prominent RFID vendors, Zebra and Impinj, have most of their documentation, troubleshooting, and other resources behind some layer of security. The assumption being made by these two organizations is that the only people who might need to see that information are members of an organization that deals in enterprise level RFID solutions. This led to lots of time scouring the websites and forums for what should have been relatively easy-to-get resources. That being said, I was eventually able to find the SDK (Software Development Kit) for the Impinj Readers and a demo program showing how to start reading tags. From there I was able to build on that to send the necessary tag data to a server my integrating the C# Socket.io client.
+            
+            
+            
+                   <br><br> Lastly, the mobile app presented issues in the form of a new programming language. The flutter framework uses a programming language called Dart, one that I had never heard of, nor used before. This, along with a general unfamiliarity with the Flutter framework, made it difficult to make edits and improvements to the app. The greatest challenge coming in the form of integrating the Socket.io client with the app. Which allowed for the app to communicate with the server; registering the associated tag with the server and listening for an event from the server indicating that the tag had been read by the reader (i.e. the user was detected in the exhibit area) and then delivering content.
+                    </p>
+            </div>
+            <div id="suppPics">
+                <img src="../assets/rfidCodePicShort.png" alt="RFID Reader C# Code" width="80%">
+                <h4>Code for the RFID Reader; Written in C#</h4>
+                <img src="../assets/flutterCodenew.png" alt="Flutter App Code" width="80%">
+                <h4>Code for Mobile App; Built with Flutter, written in Dart</h4>
+            </div>
+        </div>
+        <br>
+        <h2>User Research</h2>
+        <p>At the end of the project, we conducted usability testing to see what pitfalls were evident in the accessibility of the app. One of the surprising takeaways that came of this was that we had too much irrelevant information being read out loud and users found it confusing. So much time was spent making sure they were ‘seeing’ everything present in the app when in reality it was more important to keep the process simple and streamlined. That challenge of my assumptions and new knowledge of how to create accessible designs was very beneficial for me as a designer.</p>
+
+<div id="suppPics">
+    <img src="../assets/sosResearchMats.jpg" alt="" width="50%">
+    <h4>User Testing Research Materials</h4>
+</div>
+
+        <h2>Takeaways</h2>
+        <p>
+            One of the biggest takeaways from this project was how easy projects can stall out. The Smithsonian was supposed to spearhead this project and help me and my co-worker along our path to replicate their work. Instead, 3 months after we finished our project, the Smithsonian is paying us to build them the same thing! Another takeaway was the importance of project management. At a base level I knew project management was important but it’s easy as someone not managing to ignore the importance of organization and keeping track of the administrative tasks until it's too late. 
+            </p>
+        <h2>App Screenshots</h2>
+        <!-- Include project screenshots or images here -->
+        <div id ="proPics">
+            <img src="../assets/app1.png" alt="RFID App Home Screen" width="20%">
+            <img src="../assets/app2.png" alt="RFID App Home Screen" width="20%">
+            <img src="../assets/app3.png" alt="RFID App Home Screen" width="20%">
+            <img src="../assets/app4.png" alt="RFID App Home Screen" width="20%">
+        </div>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Node.js server with Socket.io Integration</li>
+            <li>Reader Progam written in C# with socket.io client integration</li>
+            <li>Mobile App built with Dart and Flutter, also with socket.io client integration</li>
+            <!-- Add more features as needed -->
+        </ul>
+    </section>
+
+    <section id="back-to-portfolio">
+        <h4>&larr; <a href="./index.html">Back to Home</a></h4>
+    </section>
+
+</body>
+</html>

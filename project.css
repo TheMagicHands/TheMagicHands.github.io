@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500&family=Pacifico&display=swap');
+
+html{
+    font-family: "Montserrat";
+    color: white;
+    
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #5B9ED9;
+}
+
+header {
+    
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+ /* Add your CSS styles here */
+ @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500&family=Pacifico&display=swap');
+ body {
+     
+     margin: 0;
+     padding: 0;
+ }
+
+ header {
+     
+     color: #000;
+     padding: 10px;
+     text-align: center;
+ }
+
+ nav {
+     background-color: none;
+     padding: 10px;
+     margin-top: 20px;
+     text-align: center;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     height: 8rem;
+     position: sticky;
+     top:0rem;
+     z-index: 10;
+ }
+
+ nav ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     text-align: center;
+     display: flex;
+     flex-direction: row;
+ }
+
+ nav ul li {
+     
+     margin-right: 10px;
+ }
+
+ nav a {
+     text-decoration: none;
+     color: #333;
+     padding: 5px 10px;
+     height: 4rem;
+     width: 10rem;
+     
+ }
+
+ nav a:hover {
+     
+     color: #000;
+ }
+
+ .navLink{
+     
+     background-size: contain;
+     background-repeat: no-repeat;
+     position: relative;
+     background-position: center;
+     overflow: visible;
+     text-align: center;
+     line-height: 4rem;
+     color: #fff;
+ }
+
+ #homeLink{
+     background-image: url(./assets/homeCloudLight.svg);
+     align-self: flex-end;
+     
+ }
+
+ #aboutLink{
+     background-image: url(./assets/aboutCloudLight.svg);
+     align-self: flex-start;
+ }
+
+ #projectsLink{
+     background-image: url(./assets/projectsCloudLight.svg);
+     align-self: center;
+     height: 5rem;
+     line-height: 5rem;
+ }
+
+ #resumeLink{
+     background-image: url(./assets/homeCloudLight.svg);
+     align-self: flex-start;
+ }
+
+ #contactLink{
+     background-image: url(./assets/aboutCloudLight.svg);
+     align-self: flex-end;
+ }
+
+
+section {
+    padding: 2em 8em;
+    
+    margin: 3rem;
+    background-color: transparent;
+    border: solid .1rem;
+    border-color: #187ECE;
+    border-radius: 20px;
+}
+
+h1, h2, h3 {
+    color: #9a8e8e;
+}
+section h2{
+    color:#fff;
+    text-decoration: underline;
+    text-decoration-color: #022859 ;
+}
+
+header h1{
+    color:#fff;
+    text-shadow:
+        0    2px 0 #022859,
+        0   -2px 0 #022859;
+}
+p {
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#proPics{
+    display: flex;
+    justify-content: space-between;
+}
+
+#suppPics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#halfText{
+    width:100%;
+}
